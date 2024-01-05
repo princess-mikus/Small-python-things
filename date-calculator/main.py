@@ -40,16 +40,16 @@ def main():
 
 	if sys.argv[1] != "today" and sys.argv[2] != "today":
 		if int(delta.days) < 0:
-			print(sys.argv[1], "is", int(delta.days) * -1, "days before", sys.argv[2])
+			print(f"{sys.argv[1]} is {int(delta.days) * -1} days before {sys.argv[2]}")
 		elif int(delta.days) > 0:
-			print(sys.argv[1], "is", int(delta.days) * -1, "days after", sys.argv[2])
+			print(f"{sys.argv[1]} is {int(delta.days)} days after {sys.argv[2]}")
 		else:
 			print("Those are the same dates!")
 	else:
 		if int(delta.days) < 0:
-			print("That date will be in", int(delta.days) * -1 , "days")
+			print(f"That date will be in {int(delta.days) * -1} days")
 		elif int(delta.days) > 0:
-			print("That date was", int(delta.days) * -1 , "days in the past")
+			print(f"That date was {int(delta.days)} days in the past")
 		else:
 			print("Today is indeed today")
 
