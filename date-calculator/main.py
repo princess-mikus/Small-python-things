@@ -38,17 +38,17 @@ def main():
 	delta = date1 - date2
 
 	if argv[1] != "today" and argv[2] != "today":
-		if int(delta.days) > 0:
-			print(f"{argv[1]} is {int(delta.days)} days before {argv[2]}")
-		elif int(delta.days) < 0:
-			print(f"{argv[1]} is {int(delta.days) * -1} days after {argv[2]}")
+		if date1 < date2:
+			print(f"{argv[1]} is {int(delta.days) * -1} days before {argv[2]}")
+		elif date1 > date2:
+			print(f"{argv[1]} is {int(delta.days)} days after {argv[2]}")
 		else:
 			print("Those are the same dates!")
 	else:
-		if int(delta.days) > 0:
-			print(f"That date will be in {int(delta.days)} days")
-		elif int(delta.days) < 0:
-			print(f"That date was {int(delta.days) * -1} days in the past")
+		if date1 < date2:
+			print(f"That date will be in {int(delta.days) * -1} days")
+		elif date1 > date2:
+			print(f"That date was {int(delta.days)} days in the past")
 		else:
 			print("Today is indeed today")
 
